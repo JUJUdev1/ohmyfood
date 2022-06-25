@@ -1,0 +1,8 @@
+.fonctionnement button {
+    &:hover {
+      background-color: #9256dc2d;
+    }
+    &:hover i {
+      color: var(--gradient3);
+    }
+  }
