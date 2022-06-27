@@ -1,0 +1,61 @@
+.fonctionnement {
+  margin: 50px 5% 5% 5%;
+  &_tab {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 40px;
+    & button {
+      border-radius: 20px;
+      padding: 20px;
+      background-color: $lighter-header-color;
+      border: none;
+      box-shadow: 2px 3px 10px rgb(0 0 0 / 20%);
+      margin: 10px 0;
+      @media screen and (min-width: 992px) {
+        width: 30%;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &_btn {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 70%;
+    justify-items: center;
+    position: relative;
+    & i {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    & label {
+      font-weight: 600;
+      &::before {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        transform: translate(-100%, -50%);
+        color: white;
+        background-color: $primary-color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+      }
+    }
+  }
+}
+
+.btn_1::before {
+  content: "1";
+}
+.btn_2::before {
+  content: "2";
+}
+.btn_3::before {
+  content: "3";
+}

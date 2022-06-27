@@ -1,0 +1,8 @@
+.fonctionnement button {
+    &:hover {
+      background-color: $lighter-primary-color;
+      & i {
+        color: $primary-color;
+      }
+    }
+  }
