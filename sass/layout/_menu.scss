@@ -1,8 +1,71 @@
-.header {
-  &-background {
+.menu {
+  &_imager {
+    height: 55vw;
     & img {
       width: 100%;
       object-fit: cover;
     }
   }
+  &_choices {
+    border-radius: 40px;
+    position: relative;
+    width: 100%;
+    background-color: $lighter-header-color;
+    padding: 8% 5%;
+  }
+  &_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    & h1 {
+      margin-right: 10px;
+      font-family: "Shrikhand", cursive;
+    }
+    & i {
+      font-size: 20px;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      color: transparent;
+    }
+  }
+  & h2{
+    font-weight: normal;
+    margin: 20px 0 20px 0;
+    font-size: 18px;  
+    position: relative;
+    width: 40px;
+  }
+  &_items-contenair{
+    margin: 20px 0 20px 0;
+    border-radius: 20px;
+    background-color: white;
+    padding: 15px;
+    @include shadow;
+  }
+  & span{
+    display: flex;
+    justify-content: space-between;
+  }
+  & h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  & p {
+    font-size: 18px;
+  }
+  &_price{
+    font-weight: bold;
+  }
+}
+
+h2::after {
+  content: '';
+  height: 2px;
+  width: 90%; 
+  position: absolute;
+  background: $tertiary-color;
+  bottom: -10px;
+  left: 1;
+  max-width: 100px;
 }
