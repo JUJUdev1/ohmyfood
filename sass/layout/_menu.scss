@@ -1,4 +1,11 @@
 .menu {
+  &_contenair {
+    @media screen and (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
   &_imager {
     height: 55vw;
     & img {
@@ -7,7 +14,7 @@
     }
   }
   &_choices {
-    border-radius: 40px;
+    border-radius: 40px 40px 0 0;
     position: relative;
     width: 100%;
     background-color: $lighter-header-color;
@@ -22,27 +29,40 @@
       font-family: "Shrikhand", cursive;
     }
     & i {
-      font-size: 20px;
+      font-size: 30px;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
       color: transparent;
     }
   }
-  & h2{
+  & h2 {
     font-weight: normal;
     margin: 20px 0 20px 0;
-    font-size: 18px;  
+    font-size: 18px;
     position: relative;
     width: 40px;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 90%;
+      position: absolute;
+      background: $tertiary-color;
+      bottom: -10px;
+      left: 1;
+      max-width: 100px;
+    }
   }
-  &_items-contenair{
+  &_items-contenair {
     margin: 20px 0 20px 0;
     border-radius: 20px;
     background-color: white;
     padding: 15px;
     @include shadow;
+    @media screen and (min-width: 992px) {
+      width: 30%;
+    }
   }
-  & span{
+  & span {
     display: flex;
     justify-content: space-between;
   }
@@ -50,22 +70,19 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   & p {
     font-size: 18px;
   }
-  &_price{
+  &_price {
     font-weight: bold;
   }
-}
-
-h2::after {
-  content: '';
-  height: 2px;
-  width: 90%; 
-  position: absolute;
-  background: $tertiary-color;
-  bottom: -10px;
-  left: 1;
-  max-width: 100px;
+  &_details {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

@@ -25,22 +25,22 @@
       width: 20%;
       height: 400px;
     }
-  }
-  & img {
-    width: 100%;
-    object-fit: cover;
-    height: 70%;
-    border-radius: 20px 20px 0 0;
+    & img {
+      width: 100%;
+      object-fit: cover;
+      height: 70%;
+      border-radius: 20px 20px 0 0;
+    }
   }
   &_description {
     position: relative;
     margin: 3%;
     @media screen and (min-width: 992px) {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-        justify-content: space-evenly;
-      }
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: space-evenly;
+    }
   }
   & h3 {
     font-size: 20px;
@@ -57,20 +57,7 @@
     -webkit-text-stroke-color: black;
     color: transparent;
     @media screen and (min-width: 992px) {
-        top: 65px;
-      }
+      top: 65px;
+    }
   }
-}
-
-.restaurant_images-1 {
-  object-position: 50% 95%;
-}
-.restaurant_images-2 {
-  object-position: 50% 60%;
-}
-.restaurant_images-3 {
-  object-position: 20% 100%;
-}
-.restaurant_images-4 {
-  object-position: 50% 100%;
 }

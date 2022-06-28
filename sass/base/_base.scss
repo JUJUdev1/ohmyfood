@@ -16,3 +16,27 @@ a {
   text-decoration: none;
   color: black;
 }
+
+
+.restaurant_images-1 {
+  object-position: 50% 95%;
+}
+.restaurant_images-2 {
+  object-position: 50% 60%;
+}
+.restaurant_images-3 {
+  object-position: 20% 100%;
+}
+.restaurant_images-4 {
+  object-position: 50% 100%;
+}
+
+.btn_1::before {
+  content: "1";
+}
+.btn_2::before {
+  content: "2";
+}
+.btn_3::before {
+  content: "3";
+}

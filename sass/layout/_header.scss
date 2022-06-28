@@ -1,11 +1,17 @@
 /* header */
 .header {
-    display: flex;
-    justify-content: center;
-  
-    img {
-      width: 40%;
-      margin: 15px 0;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40%;
+    margin: 15px 0;
   }
-  /* header */
+  & i {
+    position: absolute;
+    left: 20px;
+    font-size: 25px;
+  }
+}
+/* header */
