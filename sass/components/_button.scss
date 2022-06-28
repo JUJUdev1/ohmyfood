@@ -1,14 +1,20 @@
 .main_button {
-    border-radius: 30px;
-    padding: 15px 30px;
-    cursor: pointer;
-    margin: 20px;
-    background-image: $gradiant;
-    color: white;
-    border: none;
-    @include shadow;
-  }
+  border-radius: 30px;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  background-image: $gradiant;
+  color: white;
+  border: none;
 
-  .order_button{
-    text-align: center;
+  @include shadow;
+  @media screen and (min-width: 992px) {
+    margin: 40px 0 0 0;
+    width: 50%;
+    max-width: 300px;
   }
+}
+
+.order_button {
+  text-align: center;
+}

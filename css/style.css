@@ -5,6 +5,20 @@
   color: #9356dc;
 }
 
+.fade_in {
+  animation: fadein 3s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -301,7 +315,7 @@ p {
 }
 .search_content {
   text-align: center;
-  padding: 30px 0px;
+  padding: 30px;
   background-color: #f5f5f5;
 }
 .search_content h1 {
@@ -313,7 +327,7 @@ p {
   margin: 10px 0;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .menu_contenair {
     display: flex;
     justify-content: space-between;
@@ -323,9 +337,19 @@ p {
 .menu_imager {
   height: 55vw;
 }
+@media screen and (min-width: 768px) {
+  .menu_imager {
+    height: auto;
+  }
+}
 .menu_imager img {
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .menu_imager img {
+    height: 20%;
+  }
 }
 .menu_choices {
   border-radius: 40px 40px 0 0;
@@ -333,6 +357,11 @@ p {
   width: 100%;
   background-color: #f5f5f5;
   padding: 8% 5%;
+}
+@media screen and (min-width: 768px) {
+  .menu_choices {
+    border-radius: 0;
+  }
 }
 .menu_title {
   display: flex;
@@ -373,7 +402,7 @@ p {
   padding: 15px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .menu_items-contenair {
     width: 30%;
   }
@@ -532,11 +561,18 @@ p {
   border-radius: 30px;
   padding: 15px 30px;
   cursor: pointer;
-  margin: 20px;
+  margin: 20px 0 0 0;
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
   border: none;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 992px) {
+  .main_button {
+    margin: 40px 0 0 0;
+    width: 50%;
+    max-width: 300px;
+  }
 }
 
 .order_button {

@@ -1,8 +1,24 @@
+// fonctionnement bouton
 .fonctionnement button {
-    &:hover {
-      background-color: $lighter-primary-color;
-      & i {
-        color: $primary-color;
-      }
+  &:hover {
+    background-color: $lighter-primary-color;
+    & i {
+      color: $primary-color;
     }
   }
+}
+
+// apparition menu progressive
+.fade_in {
+  animation: fadein 3s;
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

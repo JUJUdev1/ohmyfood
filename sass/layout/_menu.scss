@@ -1,6 +1,6 @@
 .menu {
   &_contenair {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -8,9 +8,15 @@
   }
   &_imager {
     height: 55vw;
+    @media screen and (min-width: 768px) {
+      height: auto;
+    }
     & img {
       width: 100%;
       object-fit: cover;
+      @media screen and (min-width: 768px) {
+        height: 20%;
+      }
     }
   }
   &_choices {
@@ -19,6 +25,9 @@
     width: 100%;
     background-color: $lighter-header-color;
     padding: 8% 5%;
+    @media screen and (min-width: 768px) {
+      border-radius: 0;
+    }
   }
   &_title {
     display: flex;
@@ -58,7 +67,7 @@
     background-color: white;
     padding: 15px;
     @include shadow;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
       width: 30%;
     }
   }
