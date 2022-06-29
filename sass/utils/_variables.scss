@@ -1,8 +1,24 @@
-$primary-color:#9356dc;
-$lighter-primary-color:#9256dc2d;
-$secondary-color:#ff79da;
-$tertiary-color:#99e2d0;
-$footer-color:#525252;
-$header-color:#ededed;
-$lighter-header-color:#f5f5f5;
-$gradiant: linear-gradient($secondary-color,$primary-color);
+$primary-color: #9356dc;
+$lighter-primary-color: #9256dc2d;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$footer-color: #525252;
+$header-color: #ededed;
+$lighter-header-color: #f5f5f5;
+$gradiant: linear-gradient($secondary-color, $primary-color);
+$heart-gradiant: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 50%,
+    transparent 50%,
+    transparent 100%
+  ),
+  linear-gradient(180deg, #9356dc, #ff79da);
+  $heart_gradiant-menu: linear-gradient(
+    90deg,
+    $lighter-header-color 0%,
+    $lighter-header-color 50%,
+    transparent 50%,
+    transparent 100%
+  ),
+  linear-gradient(180deg, #9356dc, #ff79da);

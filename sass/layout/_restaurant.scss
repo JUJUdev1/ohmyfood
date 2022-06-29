@@ -56,8 +56,16 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     color: transparent;
+    background: $heart-gradiant;
+    -webkit-background-clip: text;
+    transition: all 1s ease-in-out;
+    background-size: 200%;
     @media screen and (min-width: 992px) {
       top: 65px;
     }
+    &:active {
+  background-position: right;
+  -webkit-text-stroke-width: 0;
+}
   }
 }

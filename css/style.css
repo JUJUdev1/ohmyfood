@@ -19,6 +19,32 @@
   }
 }
 
+@keyframes apparition {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -308,15 +334,6 @@ p {
   height: 100%;
   animation: apparition 0.2s 3s ease-in-out forwards;
 }
-@keyframes apparition {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-    visibility: hidden;
-  }
-}
 .loader_spinner::after, .loader_spinner::before {
   content: "";
   position: absolute;
@@ -327,41 +344,25 @@ p {
   margin: auto;
   border: 3px solid;
   border-color: #ff79da #9356dc;
-  width: 70px;
-  height: 70px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   box-sizing: border-box;
   animation: rotationBack 0.5s linear infinite;
   transform-origin: center center;
 }
 .loader_spinner::before {
-  width: 42px;
-  height: 42px;
+  width: 80px;
+  height: 80px;
   border-color: #ff79da #99e2d0;
   animation: rotation 1.5s linear infinite;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
 }
 
 .search_localisation {
   padding: 15px;
   text-align: center;
   background-color: rgba(233, 233, 233, 0.8392156863);
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
 }
@@ -435,6 +436,14 @@ p {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   color: transparent;
+  background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 50%, transparent 50%, transparent 100%), linear-gradient(180deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  transition: all 1s ease-in-out;
+  background-size: 200%;
+}
+.menu_title i:active {
+  background-position: right;
+  -webkit-text-stroke-width: 0;
 }
 .menu h2 {
   font-weight: normal;
@@ -608,11 +617,19 @@ p {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   color: transparent;
+  background: linear-gradient(90deg, #fff 0%, #fff 50%, transparent 50%, transparent 100%), linear-gradient(180deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  transition: all 1s ease-in-out;
+  background-size: 200%;
 }
 @media screen and (min-width: 992px) {
   .restaurant i {
     top: 65px;
   }
+}
+.restaurant i:active {
+  background-position: right;
+  -webkit-text-stroke-width: 0;
 }
 
 .main_button {
