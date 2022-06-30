@@ -53,3 +53,21 @@
     }
   }
 }
+
+.menu_items-contenair:hover {
+  & > .menu_check {
+    background-color: $tertiary-color;
+    width: 50%;
+    transition: all 1.5s;
+    & > i {
+      background-color: white;
+      color: $tertiary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+      transform: rotate(360deg);
+
+    }
+  }
+}

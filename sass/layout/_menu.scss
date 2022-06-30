@@ -44,6 +44,7 @@
       color: transparent;
       background: $heart_gradiant-menu;
       -webkit-background-clip: text;
+      background-clip: text;
       transition: all 1s ease-in-out;
       background-size: 200%;
       &:active {
@@ -70,23 +71,20 @@
     }
   }
   &_items-contenair {
+    display: flex;
+    justify-content: space-between;
     margin: 20px 0 20px 0;
     border-radius: 20px;
     background-color: white;
-    padding: 15px;
     @include shadow;
     @media screen and (min-width: 768px) {
       width: 30%;
     }
   }
-  & span {
-    display: flex;
-    justify-content: space-between;
-  }
   & h3 {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 15px 0 0 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -101,5 +99,34 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  &_check {
+    display: flex;
+    align-items: center;
+    width: 0;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    &:hover {
+      background-color: $tertiary-color;
+      width: 30%;
+      transition: all 1.5s;
+    }
+    & i {
+      color: transparent;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+  &_text {
+    width: -webkit-fill-available;
+    min-width: 0;
+    & span {
+      display: flex;
+      justify-content: space-between;
+      margin:8px 15px;
+    }
   }
 }
