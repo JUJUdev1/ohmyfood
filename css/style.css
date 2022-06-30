@@ -60,6 +60,14 @@
   transform: rotate(360deg);
 }
 
+@keyframes clignote {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -611,6 +619,7 @@ p {
   gap: 5%; /* important */
 }
 .restaurant_card {
+  position: relative;
   border-radius: 20px;
   width: 300px;
   height: 226px;
@@ -661,6 +670,7 @@ p {
   color: transparent;
   background: linear-gradient(90deg, #fff 0%, #fff 50%, transparent 50%, transparent 100%), linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
+  background-clip: text;
   transition: all 1s ease-in-out;
   background-size: 200%;
 }
@@ -672,6 +682,21 @@ p {
 .restaurant i:active {
   background-position: right;
   -webkit-text-stroke-width: 0;
+}
+.restaurant_new-tag {
+  position: absolute;
+  right: 10;
+  top: 10;
+  background: #99e2d0;
+  padding: 10px 10px;
+  border-radius: 2px;
+  font-size: 18px;
+  color: rgb(4, 136, 94);
+  font-weight: 500;
+}
+
+.clignote {
+  animation: clignote 2s linear infinite;
 }
 
 .main_button {

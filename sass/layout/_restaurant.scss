@@ -12,6 +12,7 @@
     gap: 5%; /* important */
   }
   &_card {
+    position: relative;
     border-radius: 20px;
     width: 300px;
     height: 226px;
@@ -58,14 +59,32 @@
     color: transparent;
     background: $heart-gradiant;
     -webkit-background-clip: text;
+    background-clip: text;
     transition: all 1s ease-in-out;
     background-size: 200%;
     @media screen and (min-width: 992px) {
       top: 65px;
     }
     &:active {
-  background-position: right;
-  -webkit-text-stroke-width: 0;
-}
+      background-position: right;
+      -webkit-text-stroke-width: 0;
+    }
+  }
+  &_new-tag {
+    position: absolute;
+    right: 10;
+    top: 10;
+    background: $tertiary-color;
+    padding: 10px 10px;
+    border-radius: 2px;
+    font-size: 18px;
+    color: rgb(4, 136, 94);
+    font-weight: 500;
   }
 }
+
+.clignote {
+  animation: clignote 2s linear infinite;
+}
+
+

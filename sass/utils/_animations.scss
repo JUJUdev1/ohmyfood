@@ -54,6 +54,7 @@
   }
 }
 
+// hover check menu
 .menu_items-contenair:hover {
   & > .menu_check {
     background-color: $tertiary-color;
@@ -69,5 +70,15 @@
       transform: rotate(360deg);
 
     }
+  }
+}
+
+// banniere clignote
+@keyframes clignote {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
