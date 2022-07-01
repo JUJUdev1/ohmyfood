@@ -737,4 +737,9 @@ p {
   text-align: center;
 }
 
+.fonctionnement_tab button:hover {
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.35);
+  transform: scale(1.02);
+}
+
 /*# sourceMappingURL=style.css.map */
