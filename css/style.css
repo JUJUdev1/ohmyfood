@@ -7,24 +7,26 @@
 
 .fade_in1 {
   animation: fadein 2s;
+  animation-fill-mode: both;
 }
 .fade_in2 {
   animation: fadein 2s;
   animation-delay: 1.5s;
+  animation-fill-mode: both;
 }
 .fade_in3 {
   animation: fadein 2s;
   animation-delay: 3s;
+  animation-fill-mode: both;
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(10%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes apparition {
@@ -639,6 +641,9 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   flex-grow: 1;
 }
+.restaurant_card:hover {
+  transform: scale(1.03);
+}
 @media screen and (min-width: 992px) {
   .restaurant_card {
     width: 440px;
@@ -711,7 +716,12 @@ p {
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
   border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.main_button:hover {
+  background-image: linear-gradient(#f988d9, #945fd5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 992px) {
   .main_button {

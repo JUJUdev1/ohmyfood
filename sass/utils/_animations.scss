@@ -13,25 +13,27 @@
 .fade_in {
   &1{
     animation: fadein 2s; 
+    animation-fill-mode: both;
   }
   &2{
     animation: fadein 2s;
     animation-delay: 1.5s; 
+    animation-fill-mode: both;
   }
   &3{
     animation: fadein 2s;
     animation-delay: 3s; 
+    animation-fill-mode: both;
   }
   
 }
 @keyframes fadein {
     0% {
       opacity: 0;
-      transform: translateY(-50%);
+      transform: translateY(10%);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 
