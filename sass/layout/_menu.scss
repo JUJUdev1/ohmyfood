@@ -76,9 +76,19 @@
     margin: 20px 0 20px 0;
     border-radius: 20px;
     background-color: white;
+    overflow: hidden;
     @include shadow;
     @media screen and (min-width: 768px) {
       width: 30%;
+    }
+    &:active .menu_check {
+      width: 30%;
+      transition: all 1.5s;
+    }
+    &:active i {
+      visibility: visible;
+      transition: 1.5s;
+      transform: rotate(720deg);
     }
   }
   & h3 {
@@ -107,26 +117,30 @@
     justify-content: center;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
-    &:hover {
-      background-color: $tertiary-color;
-      width: 30%;
-      transition: all 1.5s;
-    }
+    transition: all 1.5s;
+    background-color: $tertiary-color;
     & i {
-      color: transparent;
+      visibility: hidden;
+      color: $tertiary-color;
+      background-color: white;
       border-radius: 50%;
       width: 30px;
       height: 30px;
       font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.5s;
+      transform: rotate(0deg);
     }
   }
   &_text {
-    width: -webkit-fill-available;
+    width: 100%;
     min-width: 0;
     & span {
       display: flex;
       justify-content: space-between;
-      margin:8px 15px;
+      margin: 8px 15px;
     }
   }
 }

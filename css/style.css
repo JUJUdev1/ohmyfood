@@ -5,20 +5,28 @@
   color: #9356dc;
 }
 
-.fade_in {
-  animation: fadein 3s;
+.fade_in1 {
+  animation: fadein 2s;
 }
+.fade_in2 {
+  animation: fadein 2s;
+  animation-delay: 1.5s;
+}
+.fade_in3 {
+  animation: fadein 2s;
+  animation-delay: 3s;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50%);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes apparition {
   from {
     opacity: 100%;
@@ -43,21 +51,6 @@
   100% {
     transform: rotate(-360deg);
   }
-}
-
-.menu_items-contenair:hover > .menu_check {
-  background-color: #99e2d0;
-  width: 50%;
-  transition: all 1.5s;
-}
-.menu_items-contenair:hover > .menu_check > i {
-  background-color: white;
-  color: #99e2d0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s;
-  transform: rotate(360deg);
 }
 
 @keyframes clignote {
@@ -492,12 +485,22 @@ p {
   margin: 20px 0 20px 0;
   border-radius: 20px;
   background-color: white;
+  overflow: hidden;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 768px) {
   .menu_items-contenair {
     width: 30%;
   }
+}
+.menu_items-contenair:active .menu_check {
+  width: 30%;
+  transition: all 1.5s;
+}
+.menu_items-contenair:active i {
+  visibility: visible;
+  transition: 1.5s;
+  transform: rotate(720deg);
 }
 .menu h3 {
   font-size: 18px;
@@ -525,21 +528,25 @@ p {
   justify-content: center;
   border-radius: 0 20px 20px 0;
   cursor: pointer;
-}
-.menu_check:hover {
-  background-color: #99e2d0;
-  width: 30%;
   transition: all 1.5s;
+  background-color: #99e2d0;
 }
 .menu_check i {
-  color: transparent;
+  visibility: hidden;
+  color: #99e2d0;
+  background-color: white;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1.5s;
+  transform: rotate(0deg);
 }
 .menu_text {
-  width: -webkit-fill-available;
+  width: 100%;
   min-width: 0;
 }
 .menu_text span {
@@ -605,6 +612,7 @@ p {
 }
 
 .restaurant {
+  width: 100%;
   background-color: rgba(158, 158, 158, 0.1019607843);
   display: flex;
   flex-direction: column;
@@ -614,6 +622,7 @@ p {
   margin: 50px 0 20px 0;
 }
 .restaurant_contenair {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 5%; /* important */
@@ -623,7 +632,7 @@ p {
   border-radius: 20px;
   width: 300px;
   height: 226px;
-  margin: 10px 0px;
+  margin: 10px auto;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -632,27 +641,22 @@ p {
 }
 @media screen and (min-width: 992px) {
   .restaurant_card {
-    width: 20%;
-    height: 400px;
+    width: 440px;
+    height: 300px;
   }
 }
-.restaurant_card img {
+.restaurant_card a {
+  width: 100%;
+  height: 100%;
+}
+.restaurant_card a img {
   width: 100%;
   object-fit: cover;
   height: 70%;
   border-radius: 20px 20px 0 0;
 }
 .restaurant_description {
-  position: relative;
   margin: 3%;
-}
-@media screen and (min-width: 992px) {
-  .restaurant_description {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    justify-content: space-evenly;
-  }
 }
 .restaurant h3 {
   font-size: 20px;
@@ -662,8 +666,8 @@ p {
 .restaurant i {
   cursor: pointer;
   position: absolute;
-  right: 0.4%;
-  top: 10px;
+  right: 25px;
+  bottom: 20px;
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -676,7 +680,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .restaurant i {
-    top: 65px;
+    bottom: 25px;
   }
 }
 .restaurant i:active {
@@ -685,8 +689,8 @@ p {
 }
 .restaurant_new-tag {
   position: absolute;
-  right: 10;
-  top: 10;
+  right: 10px;
+  top: 10px;
   background: #99e2d0;
   padding: 10px 10px;
   border-radius: 2px;
