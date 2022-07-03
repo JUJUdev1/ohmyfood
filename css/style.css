@@ -484,6 +484,7 @@ p {
   max-width: 100px;
 }
 .menu_items-contenair {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 20px 0 20px 0;
