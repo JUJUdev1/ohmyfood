@@ -500,11 +500,11 @@ p {
 }
 .menu_items-contenair:active .menu_check {
   width: 30%;
-  transition: all 1.5s;
+  transition: all 1.5;
 }
 .menu_items-contenair:active i {
   visibility: visible;
-  transition: 1.5s;
+  transition: 1.2s;
   transform: rotate(720deg);
 }
 .menu h3 {
@@ -547,7 +547,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 1.5s;
+  transition: 1s;
   transform: rotate(0deg);
 }
 .menu_text {
@@ -649,7 +649,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .restaurant_card {
-    width: 440px;
+    max-width: 400px;
     height: 300px;
   }
 }

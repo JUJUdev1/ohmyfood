@@ -84,11 +84,12 @@
     }
     &:active .menu_check {
       width: 30%;
-      transition: all 1.5s;
+      transition: all 1.5;
+    
     }
     &:active i {
       visibility: visible;
-      transition: 1.5s;
+      transition: 1.2s;
       transform: rotate(720deg);
     }
   }
@@ -118,7 +119,7 @@
     justify-content: center;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
-    transition: all 1.5s;
+    transition: all 1.5s; 
     background-color: $tertiary-color;
     & i {
       visibility: hidden;
@@ -131,7 +132,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 1.5s;
+      transition: 1s;
       transform: rotate(0deg);
     }
   }
