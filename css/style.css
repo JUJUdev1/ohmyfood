@@ -498,11 +498,11 @@ p {
     width: 30%;
   }
 }
-.menu_items-contenair:active .menu_check {
+.menu_items-contenair:hover .menu_check {
   width: 30%;
   transition: all 1.5;
 }
-.menu_items-contenair:active i {
+.menu_items-contenair:hover i {
   visibility: visible;
   transition: 1.2s;
   transform: rotate(720deg);

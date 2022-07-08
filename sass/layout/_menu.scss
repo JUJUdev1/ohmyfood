@@ -82,12 +82,12 @@
     @media screen and (min-width: 768px) {
       width: 30%;
     }
-    &:active .menu_check {
+    &:hover .menu_check {
       width: 30%;
       transition: all 1.5;
     
     }
-    &:active i {
+    &:hover i {
       visibility: visible;
       transition: 1.2s;
       transform: rotate(720deg);
