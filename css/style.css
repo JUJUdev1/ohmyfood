@@ -500,7 +500,7 @@ p {
 }
 .menu_items-contenair:hover .menu_check {
   width: 30%;
-  transition: all 1.5;
+  transition: all 1.5s;
 }
 .menu_items-contenair:hover i {
   visibility: visible;
