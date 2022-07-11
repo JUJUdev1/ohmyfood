@@ -520,6 +520,7 @@ p {
 }
 .menu_price {
   font-weight: bold;
+  margin-left: 10px;
 }
 .menu_details {
   overflow: hidden;
